@@ -1,4 +1,6 @@
 import math
+import Circulo
+import Rectangulo
 
 class Circulo:
     def __init__(self, radio):
