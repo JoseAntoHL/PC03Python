@@ -1,21 +1,5 @@
-import math
-import Circulo
-import Rectangulo
-
-class Circulo:
-    def __init__(self, radio):
-        self.radio = radio
-
-    def calcular_area(self):
-        return math.pi * self.radio**2
-
-class Rectangulo:
-    def __init__(self, base, altura):
-        self.base = base
-        self.altura = altura
-
-    def calcular_area(self):
-        return self.base * self.altura
+from Circulo import Circulo
+from Rectangulo import Rectangulo
 
 class Cuadrado(Rectangulo):
     def __init__(self, lado):
@@ -35,16 +19,16 @@ def main():
         if opcion == "1":
             radio = float(input("Ingrese el radio del círculo: "))
             circulo = Circulo(radio)
-            print(f"El área del círculo es: {circulo.calcular_area()}")
+            print(f"El área del círculo es: {circulo.area()}")
         elif opcion == "2":
             base = float(input("Ingrese la base del rectángulo: "))
             altura = float(input("Ingrese la altura del rectángulo: "))
             rectangulo = Rectangulo(base, altura)
-            print(f"El área del rectángulo es: {rectangulo.calcular_area()}")
+            print(f"El área del rectángulo es: {rectangulo.area()}")
         elif opcion == "3":
             lado = float(input("Ingrese el lado del cuadrado: "))
             cuadrado = Cuadrado(lado)
-            print(f"El área del cuadrado es: {cuadrado.calcular_area()}")
+            print(f"El área del cuadrado es: {cuadrado.area()}")
         elif opcion == "4":
             print("Saliendo...")
             break
